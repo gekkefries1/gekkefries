@@ -10,6 +10,12 @@
             padding: 0;
             background-color: #1a0000;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
 
         .blood-drop {
@@ -42,9 +48,29 @@
             width: 7px;
             height: 25px;
         }
+
+        h1 {
+            font-size: 3em;
+            color: darkred;
+            text-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 15px darkred, 0 0 20px darkred, 0 0 25px darkred, 0 0 30px darkred, 0 0 35px darkred;
+            border: 2px solid #660000;
+            padding: 20px;
+            border-radius: 10px;
+            animation: text-glow 2s infinite;
+        }
+
+        @keyframes text-glow {
+            0%, 100% {
+                text-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 15px darkred, 0 0 20px darkred, 0 0 25px darkred, 0 0 30px darkred, 0 0 35px darkred;
+            }
+            50% {
+                text-shadow: 0 0 10px darkred, 0 0 20px darkred, 0 0 30px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 60px darkred, 0 0 70px darkred;
+            }
+        }
     </style>
 </head>
 <body>
+    <h1>.gekkefries1</h1>
     <script>
         function createBloodDrops(count) {
             for (let i = 0; i < count; i++) {
@@ -60,3 +86,4 @@
     </script>
 </body>
 </html>
+
