@@ -24,7 +24,7 @@
 
         @keyframes blood-drop-animation {
             0% {
-                transform: translateY(-100vh);
+                transform: translateY(0);
                 opacity: 1;
             }
             100% {
@@ -52,7 +52,7 @@
                 drop.className = 'blood-drop';
                 drop.style.left = Math.random() * 100 + 'vw';
                 drop.style.animationDuration = Math.random() * 3 + 2 + 's';
-                drop.style.animationDelay = Math.random() * 5 + 's';
+                drop.style.animationDelay = '0s';
                 document.body.appendChild(drop);
             }
         }
