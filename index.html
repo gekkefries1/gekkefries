@@ -52,25 +52,31 @@
         h1 {
             font-size: 3em;
             color: darkred;
-            text-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 15px darkred, 0 0 20px darkred, 0 0 25px darkred, 0 0 30px darkred, 0 0 35px darkred;
-            border: 2px solid #660000;
+            text-shadow: 0 0 2px darkred, 0 0 5px darkred, 0 0 7px darkred;
+            border-radius: 5px;
             padding: 20px;
-            border-radius: 10px;
-            animation: text-glow 2s infinite;
+            display: inline-block;
         }
 
-        @keyframes text-glow {
-            0%, 100% {
-                text-shadow: 0 0 5px darkred, 0 0 10px darkred, 0 0 15px darkred, 0 0 20px darkred, 0 0 25px darkred, 0 0 30px darkred, 0 0 35px darkred;
-            }
-            50% {
-                text-shadow: 0 0 10px darkred, 0 0 20px darkred, 0 0 30px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 60px darkred, 0 0 70px darkred;
-            }
+        .outline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .outline::before {
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            top: 0;
+            color: darkred;
+            text-shadow: -1px 0 1px #660000, 0 1px 1px #660000, 1px 0 1px #660000, 0 -1px 1px #660000;
         }
     </style>
 </head>
 <body>
-    <h1>.gekkefries1</h1>
+    <div class="outline" data-text=".gekkefries1">
+        <h1>.gekkefries1</h1>
+    </div>
     <script>
         function createBloodDrops(count) {
             for (let i = 0; i < count; i++) {
@@ -86,4 +92,3 @@
     </script>
 </body>
 </html>
-
